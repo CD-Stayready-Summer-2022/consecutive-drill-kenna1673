@@ -23,6 +23,15 @@ public class SolutionTest {
         Assertions.assertEquals(expected,actual);
     }
 
+    @Test
+    public void findLongestConsecutiveSetTest03(){
+        Solution solution = new Solution();
+        Integer[] possibleFamilyMembers = new Integer[]{1, 2, 3, 4, 5, 8, 10, 11, 12, 13, 14, 15, 16, 20, 22, 23};
+        String expected = "Longest Set: {10 11 12 13 14 15 16}";
+        String actual = solution.findLongestConsecutiveSet(possibleFamilyMembers);
+        Assertions.assertEquals(expected,actual);
+    }
+
 
 
 

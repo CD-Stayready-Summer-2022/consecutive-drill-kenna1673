@@ -17,7 +17,7 @@ public class Solution {
         Arrays.sort(allNumbers);
         int count = 0;
         int largest = 0;
-        Set<Integer> consecutive = new HashSet<>();
+        Set<Integer> consecutive = new TreeSet<>();
         Set<Integer> longest;
         Map<Integer, Set<Integer>> map = new HashMap<>();
         for (int i = 0; i < allNumbers.length; i++) {
@@ -27,7 +27,7 @@ public class Solution {
                 consecutive.add(allNumbers[i]);
             } else {
                 map.put(consecutive.size(), consecutive);
-                consecutive = new HashSet<>();
+                consecutive = new TreeSet<>();
                 count = 1;
             }
             if (i == allNumbers.length - 1) {
